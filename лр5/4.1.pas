@@ -1,0 +1,18 @@
+﻿var
+  a: array[1..100] of integer;
+  n,i,b: integer;
+begin
+  readln(n);
+  for i:=1 to n do
+    read(a[i]);
+  readln;
+  for i:=1 to n div 2 do
+  begin
+    b:=a[i];
+    a[i]:=a[n-i+1];
+    a[n-i+1]:=b;
+  end;
+  for i:=1 to n do
+    write(a[i],' ');
+  writeln;
+end.
